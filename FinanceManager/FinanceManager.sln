@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{3DC4C1DE-6AF1-4784-A86B-9B59F8EC7CFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{5E1E5B51-4930-44EC-92BA-FDD908FC48CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infra\Infrastructure.csproj", "{5E1E5B51-4930-44EC-92BA-FDD908FC48CE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D0B97B84-495B-46DE-BE77-502808BF4E7D}"
 EndProject
@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserService", "UserService", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,13 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E7C25588-7E31-40D8-8DB0-BA38CF997C49} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8657EB9B-2C00-4BF1-9C0A-BC985C820EC7} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3DC4C1DE-6AF1-4784-A86B-9B59F8EC7CFB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5E1E5B51-4930-44EC-92BA-FDD908FC48CE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D0B97B84-495B-46DE-BE77-502808BF4E7D} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {724A4AC8-53C1-46FD-B892-C050F3A53A47}
