@@ -1,18 +1,22 @@
-﻿using MediatR;
+﻿using Application.DTOs;
+using MediatR;
 using UserService.Application.Interfaces;
 using UserService.Domain.Entities;
 
 namespace UserService.Application.Commands.RegisterUser;
-public class CreateUserCommandHandle : IRequestHandler<CreateUserCommand, Guid>
+public class CreateUserCommandHandle : IRequestHandler<CreateUserCommand, UserDTO>
 {
     private readonly IUserRepository _userRepository;
     public CreateUserCommandHandle(IUserRepository userRepository)
     {
         _userRepository = userRepository;
     }
-    public async Task<Guid> Handle(CreateUserCommand command, CancellationToken cancellationToken)
+    public async Task<UserDTO> Handle(CreateUserCommand command, CancellationToken cancellationToken)
     {
-        if(command == null)
+
+        UserDTO userDto = new UserDTO();
+
+        if (command == null)
             throw new ArgumentNullException(nameof(command), "Command is not null."); 
 
         if (string.IsNullOrWhiteSpace(command.Name))
@@ -31,7 +35,13 @@ public class CreateUserCommandHandle : IRequestHandler<CreateUserCommand, Guid>
         if(createdUser == null || createdUser.Id == Guid.Empty)
             throw new InvalidOperationException("User could not be created.");
 
-        return user.Id;
+        return userDto = new UserDTO
+        {
+            Id = createdUser.Id,
+            Name = createdUser.Name,
+            Email = createdUser.Email,
+            CreatedAt = createdUser.CreatedAt,
+        };
 
     }
 }
