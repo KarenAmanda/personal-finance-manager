@@ -30,7 +30,7 @@ public class UserMap : IEntityTypeConfiguration   <User>
         builder.Property(u => u.CreatedAt)
                   .IsRequired();
 
-        builder.Property(u => u.IsActive)
+        builder.Property(u => u.IsDeleted)
                    .IsRequired();
 
         builder.HasIndex(u => u.Email).IsUnique();

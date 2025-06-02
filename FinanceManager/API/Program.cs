@@ -3,6 +3,7 @@ using UserService.Application.Interfaces;
 using UserService.Infrastructure.Context;
 using UserService.Infrastructure.Data.Repositories;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
