@@ -11,6 +11,7 @@ public class User : BaseEntity
     public string Name { get; private set; } 
     public string Email { get; private set; }
     public string PasswordHash { get; private set; }
+    public bool IsActive { get; private set; } 
 
     protected User() { }
 
