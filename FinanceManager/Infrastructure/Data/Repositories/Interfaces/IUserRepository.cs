@@ -1,7 +1,7 @@
 ﻿
 using UserService.Domain.Entities;
 
-namespace Infrastructure.Data.Repositories.Interfaces;
+namespace UserService.Infrastructure.Data.Repositories.Interfaces;
 public interface IUserRepository
 {
     Task<User?> GetByUserIdAsync(Guid id);

@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UserService.Domain.Entities;
 using UserService.Infrastructure.Configurations;
 
@@ -14,8 +9,7 @@ public class UserDbContext : DbContext
     public DbSet<User> Users { get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        base.OnModelCreating(modelBuilder);
-
         modelBuilder.ApplyConfiguration(new UserMap());
+        base.OnModelCreating(modelBuilder);
     }
 }
